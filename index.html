@@ -21,8 +21,8 @@
   <script type="text/x-handlebars" data-template-name="autocomplete">
     {{input type="text" value=searchText placeholder="Search..."}}
     <ul>
-      {{#each searchResults}}
-        <li>{{this}}</li>
+      {{#each item in searchResults}}
+        <li>{{highlight item.name searchText}}</li>
       {{/each}}
     </ul>
   </script>
